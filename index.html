@@ -50,6 +50,8 @@
     }
     function showInfo(data) {
         document.getElementById("BannerTitle").innerHTML = [data[0].BannerTitle].join(", ");
+        document.getElementById("BannerTitleSmaller").innerHTML = [data[0].BannerTitleSmaller].join(", ");
+
         // document.getElementById("BannerSubTitle").innerHTML = [data[0].BannerSubTitle].join(", ");
         document.getElementById("AboutTitle").innerHTML = [data[0].AboutTitle].join(", ");
         document.getElementById("AboutContent").innerHTML = [data[0].AboutContent].join(", ");
@@ -116,6 +118,8 @@
         <!-- <div class="intro-heading" id="BannerTitle"></div> -->
         <!-- <div class="intro-lead-in" id="BannerTitle">Energy and Technology Law</div> -->
         <div class="intro-heading" id="BannerTitle"></div>
+        <div class="intro-headingSmaller" id="BannerTitleSmaller"></div>
+
         <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
       </div>
     </div>
