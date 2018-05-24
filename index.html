@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>Cameron-Daniel, P.C.</title>
 
-  <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom fonts for this template -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-  <!-- Custom styles for this template -->
   <link href="css/agency.css" rel="stylesheet">
 
-</head>
+  <script src="js/tabletop.min.js"></script>
+  <script type='text/javascript'>    
+    var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/18NRB0oFoDLgILFfpYpduXeMRGVuoqIFd5QJH9T3XYHY/edit?usp=sharing';  
+    function init() {
+      Tabletop.init( { key: publicSpreadsheetUrl,
+                       callback: showInfo,
+                       simpleSheet: true } )
+    }
+    function showInfo(data) {
+        // document.getElementById("BannerTitle").innerHTML = [data[0].BannerTitle].join(", ");
+        // document.getElementById("BannerSubTitle").innerHTML = [data[0].BannerSubTitle].join(", ");
+        document.getElementById("AboutTitle").innerHTML = [data[0].AboutTitle].join(", ");
+        document.getElementById("AboutContent").innerHTML = [data[0].AboutContent].join(", ");
+        document.getElementById("ServicesTitle").innerHTML = [data[0].ServicesTitle].join(", ");
+        document.getElementById("ServicesSubTitleA").innerHTML = [data[0].ServicesSubTitleA].join(", ");
+        document.getElementById("ServicesContentA").innerHTML = [data[0].ServicesContentA].join(", ");
+        document.getElementById("ServicesSubTitleB").innerHTML = [data[0].ServicesSubTitleB].join(", ");
+        document.getElementById("ServicesContentB").innerHTML = [data[0].ServicesContentB].join(", ");
+        document.getElementById("ServicesSubTitleC").innerHTML = [data[0].ServicesSubTitleC].join(", ");
+        document.getElementById("ServicesContentC").innerHTML = [data[0].ServicesContentC].join(", ");
+        document.getElementById("AttorneysTitle").innerHTML = [data[0].AttorneysTitle].join(", ");
+        // document.getElementById("AttorneysMainContent").innerHTML = [data[0].AttorneysMainContent].join(", ");
+        document.getElementById("AttorneysContentDanny").innerHTML = [data[0].AttorneysContentDanny].join(", ");
+        document.getElementById("AttorneysContentBruce").innerHTML = [data[0].AttorneysContentBruce].join(", ");
+        document.getElementById("ContactTitle").innerHTML = [data[0].ContactTitle].join(", ");
+        document.getElementById("ContactContent").innerHTML = [data[0].ContactContent].join(", ");
+        document.getElementById("FooterAddressLine1").innerHTML = [data[0].FooterAddressLine1].join(", ");
+        document.getElementById("FooterAddressLine2").innerHTML = [data[0].FooterAddressLine2].join(", ");
+        document.getElementById("FooterPhone").innerHTML = [data[0].FooterPhone].join(", ");
+        document.getElementById("FooterEmail").innerHTML = [data[0].FooterEmail].join(", ");
+        // $(".address").html([data[0].address].join(", "));
+    }
+    window.addEventListener('DOMContentLoaded', init)
+  </script>
 
+</head>
 <body id="page-top">
 
   <!-- Navigation -->
@@ -60,7 +88,8 @@
   <header class="masthead">
     <div class="container">
       <div class="intro-text">
-        <!-- <div class="intro-lead-in">Energy and Technology Law Firm</div> -->
+        <!-- <div class="intro-heading" id="BannerTitle"></div> -->
+        <!-- <div class="intro-lead-in" id="BannerTitle">Energy and Technology Law</div> -->
         <div class="intro-heading">Energy and Technology Law</div>
         <!-- <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a> -->
       </div>
@@ -72,185 +101,65 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase blue-text">About</h2>
-          <p class="text-muted">Cameron-Daniel, P.C. is a California law firm specializing in energy, water, and technology law. Organized as a
-            benefit corporation and backed by over 30 years of industry experience, we provide high-quality advice and creative
-            solutions. We seek to better the environment with our actions and deliver responsive, effective, and knowledgeable
-            legal services.</p>
+          <h2 class="section-heading text-uppercase blue-text" id="AboutTitle"></h2>
+          <p class="text-muted" id="AboutContent"></p>
         </div>
       </div>
-
       <div class="row">
         <!-- <div class="col-md-12">
               <p>Cameron-Daniel, P.C. is a California law firm specializing in energy, water, and technology law. As a benefit corporation backed by over 30 years of industry experience, we provide high-quality advice and creative solutions. We seek to better the environment with our actions and exceed your needs.</p>
           </div> -->
       </div>
-
-
   </section>
-
 
   <!-- Services -->
   <section id="services" class="blue-back">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase white-text">Services</h2>
+          <h2 class="section-heading text-uppercase white-text" id="ServicesTitle"></h2>
         </div>
       </div>
-
-      <div class="row">
-        <!-- <div class="col-md-12">
-                    <p>Cameron-Daniel, P.C. is a California law firm specializing in energy, water, and technology law. As a benefit corporation backed by over 30 years of industry experience, we provide high-quality advice and creative solutions. We seek to better the environment with our actions and exceed your needs.</p>
-                </div> -->
-      </div>
-
       <div class="row text-center">
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class="fa fa-sun-o fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading white-text">Energy</h4>
-          <p class="white-text">We have decades of experience in the California energy markets, including energy product procurement, contract
-            negotiation, and rate-setting.</p>
+          <h4 class="service-heading white-text" id="ServicesSubTitleA"></h4>
+          <p class="white-text" id="ServicesContentA"></p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class="fa fa-tint fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading white-text">Water</h4>
-          <p class="white-text">Our team provides experienced support related to water pumping, waterway restoration, Proposition 218, and hydroelectric
-            generation.</p>
+          <h4 class="service-heading white-text" id="ServicesSubTitleB"></h4>
+          <p class="white-text" id="ServicesContentB"></p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class="fa fa-code-fork fa-stack-1x fa-inverse"></i>
           </span>
-          <h4 class="service-heading white-text">Technology</h4>
-          <p class="white-text">Cameron-Daniel, P.C. has extensive experience in assisting clients with decisions on emerging technologies, manufacturing
-            operations, and strategic busines operations.</p>
+          <h4 class="service-heading white-text" id="ServicesSubTitleC"></h4>
+          <p class="white-text" id="ServicesContentC"></p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- Portfolio Grid -->
-  <!-- <section class="bg-light" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Portfolio</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Threads</h4>
-              <p class="text-muted">Illustration</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Explore</h4>
-              <p class="text-muted">Graphic Design</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Finish</h4>
-              <p class="text-muted">Identity</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Lines</h4>
-              <p class="text-muted">Branding</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Southwest</h4>
-              <p class="text-muted">Website Design</p>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content">
-                  <i class="fa fa-plus fa-3x"></i>
-                </div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">
-              <h4>Window</h4>
-              <p class="text-muted">Photography</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
 
   <!-- Team -->
   <section class="bg-light" id="team">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Attorneys</h2>
+          <h2 class="section-heading text-uppercase" id="AttorneysTitle">/h2>
           <br>
-          <!-- <p class="text-muted">We are energy and technology attorneys with a passion for developing solutions to problems facing the current legal landscape. Consistent with the benefit corporation declaration of interdependence we provide the highest levels of professionalism and legal services for our clients. Our multi-disciplinary approach integrates engineering and economic considerations in crafting practical and long-lasting legal solutions.</p> -->
+          <!-- <p id="AttorneysTitle" class="text-muted">We are energy and technology attorneys with a passion for developing solutions to problems facing the current legal landscape. Consistent with the benefit corporation declaration of interdependence we provide the highest levels of professionalism and legal services for our clients. Our multi-disciplinary approach integrates engineering and economic considerations in crafting practical and long-lasting legal solutions.</p> -->
         </div>
       </div>
       <div class="row">
-
- 
-
-
         <div class="col-sm-4">
           <div class="team-member">
             <br>
@@ -263,26 +172,11 @@
           <br>
           <h4>Dan Griffiths</h4>
           <p class="text-muted">Attorney</p>
-          <p> Dan serves clients in the electricity and water sectors, providing general counsel and transactional support for
-            new projects, and serving as a legal advocate before appellate courts and regulatory bodies.
-          </p>
-
-          <p></p> Dan received his bachelor’s degree in business economics from the University of California, Santa Barbara
-          and his Juris Doctor degree from the University of California, Davis School of Law. Dan is a member of the California
-          State Bar.
-          </p>
-
+          <p id="AttorneysContentDanny"></p>
           <br>
           <br>
           <!-- <a class="btn btn-primary btn-md text-uppercase" href="dangriffiths.html">Learn More</a> -->
-
         </div>
-
-
-
-    
-
-
         <div class="col-sm-4">
           <div class="team-member">
             <br>
@@ -292,66 +186,19 @@
           <!-- <br><br><br><br><br> -->
           <h4>Bruce McLaughlin</h4>
           <p class="text-muted">Attorney</p>
-          <p> Bruce has 25 years of experience providing legal services in the energy and technology sectors. Clients have ranged
-            from companies with gross sales in the tens of billions to small businesses with annual gross sales under 5 million.
-            Technologies and industries include aerospace, automotive, forest products, glass products, plastics and composites,
-            energy generation systems, manufacturing processes, machine design and development, software development, waste
-            reduction, ergonomic safety devices and environmental remediation.
-          </p>
+          <p id="AttorneysContentBruce"></p>
           <!-- <a class="btn btn-primary btn-md text-uppercase" href="dangriffiths.html">Learn More</a> -->
         </div>
       </div>
-
-
-
       </div>
-
-
-
-
-
-
-
-
-
   </section>
-
-  <!-- <section class="py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-md-3 col-sm-6">
-            <a href="#">
-              <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
   <!-- Contact -->
   <section id="contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Contact Us</h2>
-          <h3 class="section-subheading text-white">How can we help? We’d love to hear from you!
-
-          </h3>
+          <h2 class="section-heading text-uppercase" id="ContactTitle"></h2>
+          <h3 class="section-subheading text-white" id="ContactContent"></h3>
         </div>
       </div>
       <div class="row">
@@ -395,70 +242,37 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <!-- <span class="copyright">Copyright &copy; Cameron Daniel,P.C. 2018</span> -->
-          <span class="copyright"> 950 Reserve Drive, Suite 160</span>
+          <span class="copyright" id="FooterAddressLine1"> </span>
           <br>
-
-          <span class="copyright">Roseville, CA 95678</span>
-
-
-
-
+          <span class="copyright" id="FooterAddressLine2"></span>
         </div>
+        <div class="col-md-4"></div>
         <div class="col-md-4">
-          <!-- <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-facebook"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-              </li>
-            </ul> -->
-        </div>
-        <div class="col-md-4">
-          <span class="copyright">(916) 471-9518</span>
+          <span class="copyright" id="FooterPhone"></span>
           <br>
           <a href="mailto:team@cameron-daniel.com">
-            <span class="copyright">team@cameron-daniel.com</span>
+            <span class="copyright" id="FooterEmail"></span>
           </a>
         </div>
       </div>
     </div>
   </footer>
+  <!-- Portfolio Modals -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Contact form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/agency.min.js"></script>
+</body>
+</html>
 
 
   <!-- How can we help? We’d love to hear from you!
 Cameron-Daniel, P.C.’s corporate office is located in Roseville, California, close to the American River and surrounding shops and parks. -->
 
 
-
-
-  <!-- Portfolio Modals -->
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Contact form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js"></script>
-
-</body>
-
-</html>
